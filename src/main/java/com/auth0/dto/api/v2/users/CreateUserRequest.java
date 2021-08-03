@@ -1,13 +1,14 @@
 package com.auth0.dto.api.v2.users;
 
-import com.auth0.dto.api.v2.commons.AppMetadata;
-import com.auth0.dto.api.v2.commons.UserMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.builder.ToStringBuilder;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @Data
 @NoArgsConstructor
@@ -22,7 +23,7 @@ public class CreateUserRequest {
     public String phoneNumber;
 
     @JsonProperty("user_metadata")
-    public UserMetadata userMetadata;
+    public Map<String, Object> userMetadata;
 
     @JsonProperty("blocked")
     public Boolean blocked;
@@ -34,7 +35,7 @@ public class CreateUserRequest {
     public Boolean phoneVerified;
 
     @JsonProperty("app_metadata")
-    public AppMetadata appMetadata;
+    public Map<String, Object> appMetadata = new HashMap<>();
 
     @JsonProperty("given_name")
     public String givenName;
