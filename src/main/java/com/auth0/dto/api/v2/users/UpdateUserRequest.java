@@ -16,55 +16,55 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 public class UpdateUserRequest {
 
     @JsonProperty("email")
-    private String email;
+    public String email;
 
     @JsonProperty("phone_number")
-    private String phoneNumber;
+    public String phoneNumber;
 
     @JsonProperty("user_metadata")
-    private UserMetadata userMetadata;
+    public UserMetadata userMetadata;
 
     @JsonProperty("blocked")
-    private Boolean blocked;
+    public Boolean blocked;
 
     @JsonProperty("email_verified")
-    private Boolean emailVerified;
+    public Boolean emailVerified;
 
     @JsonProperty("phone_verified")
-    private Boolean phoneVerified;
+    public Boolean phoneVerified;
 
     @JsonProperty("app_metadata")
-    private AppMetadata appMetadata;
+    public AppMetadata appMetadata;
 
     @JsonProperty("given_name")
-    private String givenName;
+    public String givenName;
 
     @JsonProperty("family_name")
-    private String familyName;
+    public String familyName;
 
     @JsonProperty("name")
-    private String name;
+    public String name;
 
     @JsonProperty("nickname")
-    private String nickname;
+    public String nickname;
 
     @JsonProperty("picture")
-    private String picture;
+    public String picture;
 
     @JsonProperty("user_id")
-    private String userId;
+    public String userId;
 
     @JsonProperty("connection")
-    private String connection;
+    public String connection;
 
     @JsonProperty("password")
-    private String password;
+    public String password;
 
     @JsonProperty("verify_email")
-    private Boolean verifyEmail;
+    public Boolean verifyEmail;
 
     @JsonProperty("username")
-    private String username;
+    public String username;
 
     @Override
     public String toString() {
