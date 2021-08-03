@@ -1,9 +1,12 @@
 package com.auth0.dto.api.v2.users;
 
+import com.auth0.dto.api.v2.commons.AppMetadata;
+import com.auth0.dto.api.v2.commons.UserMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.g.g.userwrapper.adapter.users.dto.commons.AppMetadata;
-import com.g.g.userwrapper.adapter.users.dto.commons.UserMetadata;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 @Data
