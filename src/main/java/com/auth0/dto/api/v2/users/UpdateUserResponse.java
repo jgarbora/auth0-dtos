@@ -2,6 +2,7 @@ package com.auth0.dto.api.v2.users;
 
 import com.auth0.dto.api.v2.commons.AppMetadata;
 import com.auth0.dto.api.v2.commons.UserMetadata;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
@@ -10,6 +11,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 @ToString
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class UpdateUserResponse {
 
     @JsonProperty("email")

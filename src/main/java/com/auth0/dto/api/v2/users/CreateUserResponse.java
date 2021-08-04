@@ -3,6 +3,7 @@ package com.auth0.dto.api.v2.users;
 import com.auth0.dto.api.v2.commons.AppMetadata;
 import com.auth0.dto.api.v2.commons.Identity;
 import com.auth0.dto.api.v2.commons.UserMetadata;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,6 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CreateUserResponse {
 
     @JsonProperty("user_id")
