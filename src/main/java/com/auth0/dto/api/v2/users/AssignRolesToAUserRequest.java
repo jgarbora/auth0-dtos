@@ -1,7 +1,10 @@
 package com.auth0.dto.api.v2.users;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +13,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class AssignRolesToAUserRequest {
 
