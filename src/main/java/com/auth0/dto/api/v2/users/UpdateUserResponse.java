@@ -3,16 +3,13 @@ package com.auth0.dto.api.v2.users;
 import com.auth0.dto.api.v2.commons.AppMetadata;
 import com.auth0.dto.api.v2.commons.UserMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.apache.commons.lang3.builder.ToStringBuilder;
+import lombok.*;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@ToString
 public class UpdateUserResponse {
 
     @JsonProperty("email")
@@ -65,27 +62,4 @@ public class UpdateUserResponse {
 
     @JsonProperty("username")
     public String username;
-
-    @Override
-    public String toString() {
-        return new ToStringBuilder(this)
-                .append("email", email)
-                .append("phoneNumber", phoneNumber)
-                .append("userMetadata", userMetadata)
-                .append("blocked", blocked)
-                .append("emailVerified", emailVerified)
-                .append("phoneVerified", phoneVerified)
-                .append("appMetadata", appMetadata)
-                .append("givenName", givenName)
-                .append("familyName", familyName)
-                .append("name", name)
-                .append("nickname", nickname)
-                .append("picture", picture)
-                .append("userId", userId)
-                .append("connection", connection)
-                .append("password", "XXX")
-                .append("verifyEmail", verifyEmail)
-                .append("username", username)
-                .toString();
-    }
 }
