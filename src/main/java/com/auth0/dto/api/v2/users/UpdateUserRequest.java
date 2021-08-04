@@ -2,8 +2,10 @@ package com.auth0.dto.api.v2.users;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
-import org.apache.commons.lang3.builder.ToStringBuilder;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +14,6 @@ import java.util.Map;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class UpdateUserRequest {
 
@@ -66,27 +67,4 @@ public class UpdateUserRequest {
 
     @JsonProperty("username")
     public String username;
-
-    @Override
-    public String toString() {
-        return new ToStringBuilder(this)
-                .append("email", email)
-                .append("phoneNumber", phoneNumber)
-                .append("userMetadata", userMetadata)
-                .append("blocked", blocked)
-                .append("emailVerified", emailVerified)
-                .append("phoneVerified", phoneVerified)
-                .append("appMetadata", appMetadata)
-                .append("givenName", givenName)
-                .append("familyName", familyName)
-                .append("name", name)
-                .append("nickname", nickname)
-                .append("picture", picture)
-                .append("userId", userId)
-                .append("connection", connection)
-                .append("password", "XXX")
-                .append("verifyEmail", verifyEmail)
-                .append("username", username)
-                .toString();
-    }
 }
